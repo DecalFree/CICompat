@@ -2,6 +2,10 @@
 
 Compatibility layer for integrating screens from other computer mods with Computer Interface.
 
+## Supported Mods
+
+[ComputerLib](https://github.com/LapisGit/ComputerLib) by Lapis.
+
 ## Disclaimers
 
 > [!NOTE]
