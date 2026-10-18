@@ -1,6 +1,6 @@
 # CICompat
 
-Compatibilitry layer for integrating screens from other Computer mods with Computer Interface.
+Compatibility layer for integrating screens from other computer mods with Computer Interface.
 
 ## Disclaimers
 
