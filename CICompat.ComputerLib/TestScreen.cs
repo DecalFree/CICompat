@@ -7,7 +7,7 @@ using GorillaNetworking;
 namespace CICompat.ComputerLib;
 
 internal class TestScreen : Screen {
-    public override string ScreenName => "Test";
+    public override string ScreenName => "ComputerLib Test";
 
     private string _lastPressedButton;
 
