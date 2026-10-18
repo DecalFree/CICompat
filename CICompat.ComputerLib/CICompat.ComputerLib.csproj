@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <Nullable>disable</Nullable>
+
+        <GameAssemblyPath>$(GorillaTagPath)/Gorilla Tag_Data/Managed</GameAssemblyPath>
+        <LoaderAssemblyPath>$(GorillaTagPath)/BepInEx/core</LoaderAssemblyPath>
+        <LoaderModsPath>$(GorillaTagPath)/BepInEx/plugins</LoaderModsPath>
+
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <Target Name="CopyToPlugins" AfterTargets="Build">
+        <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(LoaderModsPath)/Decal's Mods/$(TargetName).dll"/>
+    </Target>
+
+    <ItemGroup>
+        <Reference Include="0Harmony">
+            <HintPath>$(LoaderAssemblyPath)/0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>$(GameAssemblyPath)/Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx">
+          <HintPath>$(LoaderAssemblyPath)/BepInEx.dll</HintPath>
+        </Reference>
+        <Reference Include="ComputerInterface">
+          <HintPath>$(LoaderModsPath)/ToniMacaroni's Mods\Computer Interface\ComputerInterface.BepInEx.dll</HintPath>
+        </Reference>
+        <Reference Include="ComputerLib">
+          <HintPath>$(LoaderModsPath)/Lapis's Mods\ComputerLib.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>$(GameAssemblyPath)/UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(GameAssemblyPath)/UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>
